@@ -1,13 +1,569 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bgColor: #f1f5fd;
+  --primary-color: #6f5de7;
+  --text-color: gray;
+  --main-text-color: #333333;
+  --shadowColor: lightgray;
+  --footer-bg: #182334;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* --------- Link ----------- */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+/* --------------------------------- Navigation bar ----------------------------------------- */
+.navbar-bg {
+  background-color: var(--bgColor);
+  padding: 10px;
+}
+.navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item {
+  font-size: 14px;
+  padding: 0 12px;
+  font-weight: normal;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0px 0.5px var(--primary-color);
+}
+.buttons .btn {
+  font-size: 14px !important;
+  border-radius: 35px;
+  border: 1px solid var(--primary-color);
+  width: 100px;
+  padding: 5px 0;
+  color: var(--primary-color);
+  font-weight: 600px;
+}
+.buttons .btn:first-child {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.buttons .btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* --------------------------------- Header section ----------------------------------------- */
+.header {
+  background-color: var(--bgColor);
+  padding-bottom: 220px;
+}
+.header .headerFirstCol {
+  text-align: left;
+  padding-right: 100px;
+  padding-top: 90px;
+}
+.header h1 {
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.header p {
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.header h4 {
+  font-weight: 600;
+}
+
+.inputButton {
+  width: 250px;
+  position: relative;
+  margin-left: -3px;
+}
+.inputButton input {
+  border-radius: 30px;
+  padding: 8px 0;
+  font-size: 13px;
+  padding-left: 15px;
+  border: none;
+  box-shadow: 0px 2px 5px lightgray;
+}
+.inputButton button {
+  padding: 6px 15px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: var(--bgColor);
+  font-size: 11px;
+}
+
+.imagesContainer {
+  position: relative;
+  text-align: center;
+}
+.imagesContainer .computer {
+  width: 60%;
+  height: 75%;
+  margin-top: 110px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.imagesContainer .mobile {
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  left: 55%;
+  top: 10%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+/* --------------------------------- How does it works ----------------------------------------- */
+@keyframes mymove {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 600px;
+  }
+  100% {
+    left: 0;
+  }
+}
+.howWorks {
+  background-color: white;
+  padding: 0px 0px;
+  margin-top: -80px;
+  padding-bottom: 50px;
+  box-shadow: 0px 3px 8px gray;
+  animation: mymove 5s ease 2s;
+  position: relative;
+}
+
+.howWorks h1 {
+  text-align: center;
+  padding: 40px 0;
+  font-weight: 700;
+}
+
+.worksColumn1 {
+  text-align: center;
+  padding: 0 40px;
+}
+.worksColumn1 h3 {
+  font-weight: 600;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.worksColumn1 i {
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--primary-color);
+  padding: 9px 13px;
+  border-radius: 50%;
+  background-color: rgb(236, 236, 236);
+}
+.worksColumn1 p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* --------------------------------- How to use App ----------------------------------------- */
+.useApp {
+  padding: 100px 70px 0 70px;
+}
+.imageBoxCol1 {
+  text-align: center;
+}
+.imageBoxRow img {
+  width: 50%;
+  height: 75%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px gray;
+}
+
+.imageBoxCol2 {
+  padding-left: 25px;
+  padding-right: 50px;
+}
+.imageBoxCol2 h4 {
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.imageBoxCol2 h2 {
+  font-weight: bold;
+}
+
+.useAppInnerRow {
+  padding: 15px 0;
+}
+
+.useAppInnerRow .col-1 span {
+  padding: 2px 7px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.useAppInnerRow .col-10 h3 {
+  font-weight: 500;
+}
+.useAppInnerRow .col-10 p {
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+/* --------------------------------- Sending Money section ----------------------------------------- */
+@keyframes servicesMove {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: 600px;
+  }
+  100% {
+    right: 0;
+  }
+}
+.sendMoneyRow {
+  animation: servicesMove 5s ease-in 3s;
+  position: relative;
+}
+.sendMoneyRow .sendMoneyBox {
+  padding: 26px 50px 20px 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px var(--shadowColor);
+  width: 30%;
+  margin: 18px auto 18px auto;
+}
+.sendMoneyRow .sendMoneyBox:hover {
+  background-color: var(--bgColor);
+}
+.sendMoneyBox .icon {
+  font-size: 18px;
+  font-weight: bolder;
+  color: var(--primary-color);
+  padding: 9px 13px;
+  border-radius: 50%;
+  background-color: rgb(236, 236, 236);
+}
+.sendMoneyBox .icon:hover {
+  background-color: white;
+}
+.sendMoneyBox h4 {
+  font-weight: 600;
+  padding: 22px 0 16px 0;
+}
+
+.sendMoneyBox p {
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+/* --------------------------------- Contact section ----------------------------------------- */
+.contact {
+  padding: 130px 60px;
+}
+
+.contact .contactCol1 {
+  padding: 0 80px;
+}
+
+.contactCol1 h2 {
+  font-weight: 700;
+}
+.contactCol1 p {
+  padding: 15px 0;
+  color: var(--text-color);
+  font-size: 12px;
+}
+.contactCol2 {
+  padding-right: 60px;
+}
+
+.formBtn {
+  border-radius: 30px;
+  padding: 5px 0;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 12px;
+  border: 1px solid var(--primary-color);
+}
+.formBtn:hover {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.inputs input,
+.inputs textarea {
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.inputs .form-check-input {
+  padding: 5px;
+}
+.inputs .form-check-label {
+  font-size: 12px;
+}
+/* --------------------------------- Footer ----------------------------------------- */
+footer {
+  background-color: var(--footer-bg);
+}
+
+footer .footer {
+  padding: 50px 0;
+  text-align: center;
+}
+.footer h2 {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.social {
+  padding: 10px 0;
+}
+.social i {
+  font-size: 20px;
+  padding: 3px 7px;
+  margin: 0 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.social i:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+.footer hr {
+  color: lightgray;
+}
+.footer p {
+  color: white;
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: lighter;
+}
+
+/* --------------------------------- Error 404 ----------------------------------------- */
+.errorSection {
+  background-color: var(--bgColor);
+}
+.error404 {
+  text-align: center;
+  width: 450px;
+  padding: 70px 0 100px 0;
+}
+
+.error404 h1 {
+  font-size: 100px;
+  font-weight: 800;
+  padding: 20px 0;
+  color: #6f5de7;
+  letter-spacing: 2px;
+}
+.error404 h2 {
+  font-weight: bold;
+}
+.error404 p {
+  padding: 10px 0 15px 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+.error404 button {
+  border: none;
+}
+.error404 a {
+  color: var(--primary-color);
+  font-size: 14px !important;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 600px;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  background-color: #fff;
+}
+.error404 a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* --------------------------------- Responsive media queries ----------------------------------------- */
+@media (min-width: 1500px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container.xxl {
+    max-width: 1500px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container.xxl {
+    max-width: 1400px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .header .headerFirstCol {
+    padding-right: 0;
+    text-align: center;
+  }
+  .inputButton {
+    margin: 20px auto;
+  }
+  .imagesContainer .mobile {
+    left: 35%;
+    top: 5%;
+  }
+  .imagesContainer {
+    margin: 40px 0;
+  }
+  .sendMoneyRow .sendMoneyBox {
+    width: 100%;
+  }
+  .worksColumn1 {
+    padding: 20px 40px;
+  }
+  .imageBoxRow img {
+    width: 70%;
+    height: 85%;
+  }
+  .imageBoxCol2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sendMoneyRow {
+    text-align: center;
+  }
+  .contact .contactCol1 {
+    padding: 0 80px 70px 0;
+    text-align: center;
+  }
+  .contact {
+    padding: 110px 30px;
+  }
+
+  .contact .contactCol1 {
+    padding: 0 0 70px 0;
+  }
+  .contactCol2 {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+  .header {
+    padding: 0 30px;
+  }
+  .imagesContainer {
+    margin: 40px 0 180px 0;
+  }
+  .imagesContainer .computer {
+    width: 75%;
+  }
+  .imagesContainer .mobile {
+    width: 70%;
+    left: 25%;
+    top: 3%;
+  }
+  .howWorks {
+    padding: 20px 30px;
+    margin: 0 20px;
+    margin-top: -70px;
+    padding-bottom: 50px;
+  }
+  .useApp {
+    padding: 100px 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .imageBoxCol2 h4,
+  h2 {
+    text-align: center;
+  }
+  .imageBoxCol2 {
+    padding-left: 30px;
+  }
+  .sendMoneyRow {
+    margin: 0 20px;
+  }
+  .contact {
+    padding: 100px 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .imagesContainer .computer {
+    width: 90%;
+  }
+  .imagesContainer .mobile {
+    left: 15%;
+    top: 5%;
+    width: 70%;
+  }
+  .howWorks {
+    padding: 20px 0px;
+  }
+  .useAppInnerRowText {
+    padding: 0 15px;
+  }
+  .inputButton {
+    width: 180px;
+  }
+  .inputButton input,
+  button {
+    font-size: 10px;
+  }
+  .inputButton button {
+    padding: 3px 8px;
+  }
+  .error404 {
+    width: 100%;
+    padding: 70px 20px;
+  }
+  .error404 h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+  }
+  .error404 p {
+    font-size: 13px;
+  }
 }
