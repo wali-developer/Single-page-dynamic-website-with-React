@@ -60,7 +60,6 @@ h6 {
   border: 1px solid var(--primary-color);
   width: 100px;
   padding: 5px 0;
-  color: var(--primary-color);
   font-weight: 600px;
 }
 .buttons .btn:first-child {
@@ -69,6 +68,12 @@ h6 {
 }
 .buttons .btn:hover {
   background-color: var(--primary-color);
+  color: white;
+}
+.buttons .btnLink {
+  color: var(--primary-color);
+}
+.buttons .btnLink:hover {
   color: white;
 }
 
@@ -413,6 +418,70 @@ footer .footer {
 .error404 a:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+/* --------------------------------- Sign up form ----------------------------------------- */
+.gradient-custom-3 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(132, 250, 176, 0.5),
+    rgba(143, 211, 244, 0.5)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(132, 250, 176, 0.5),
+    rgba(143, 211, 244, 0.5)
+  );
+}
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(132, 250, 176, 1),
+    rgba(143, 211, 244, 1)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(132, 250, 176, 1),
+    rgba(143, 211, 244, 1)
+  );
+}
+.loginCard,
+.signupCard {
+  width: 350px;
+  height: 500px;
+  max-width: 350px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+/* Login  */
+.btn-group-lg > .btn,
+.btn-lg {
+  margin-bottom: 7px;
+}
+.form-label {
+  position: absolute;
+  padding-left: 10px;
+}
+.mb-4 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-check-input:checked {
+  margin-right: 10px;
 }
 
 /* --------------------------------- Responsive media queries ----------------------------------------- */
