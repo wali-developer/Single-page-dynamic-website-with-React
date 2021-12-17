@@ -152,7 +152,7 @@ h6 {
     left: 0px;
   }
   50% {
-    left: 600px;
+    left: 100px;
   }
   100% {
     left: 0;
@@ -249,7 +249,7 @@ h6 {
     right: 0px;
   }
   50% {
-    right: 600px;
+    right: 100px;
   }
   100% {
     right: 0;
@@ -613,6 +613,9 @@ footer .footer {
   }
   .useAppInnerRowText {
     padding: 0 15px;
+  }
+  .useAppInnerRow .col-1 {
+    margin-right: 10px;
   }
   .inputButton {
     width: 180px;
